@@ -19,6 +19,8 @@
 
 if [ -e /run/lirc/lircd.irtrans ]; then
   XBMC_ARGS="--lircdev /run/lirc/lircd.irtrans"
+elif [ -e /run/lirc/lircd-lirc0 ]; then
+  XBMC_ARGS="--lircdev /run/lirc/lircd-lirc0"
 else
   XBMC_ARGS="--lircdev /run/lirc/lircd"
 fi
